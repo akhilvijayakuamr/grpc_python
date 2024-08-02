@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package helloworld;
+
+service ssgreeter{
+    rpc sayOi(HelloRequest) returns (stream HelloReply);
+}
+
+message HelloRequest{
+    string request = 1;
+}
+
+message HelloReply{
+    string response = 1;
+}
